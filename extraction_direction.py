@@ -120,10 +120,12 @@ for attr in attr_to_extract:
     z_neg = torch.stack(neg_z)
     direction = z_pos.mean(0) - z_neg.mean(0)
     z_attrs[attr] = direction
-    print(f"[INFO] v_{attr.lower()} extracted. Norm: {direction.norm():.4f}")
+    print(f"[INFO] v_{attr.lower()} extracted. Norm: {direction.norm():.4f}") #  direction.norm()벡터의 크기를 출력 -> 속성 변화 방향을 의미->방향이 의미 있게 크다거나, 너무 작아서 무시해도 될 정도다 라는 판단할 승 잇음
 
 # ==== 저장 ====
 os.makedirs("./latent_directions", exist_ok=True)
 for attr, vec in z_attrs.items():
     torch.save(vec, f"latent_directions/v_{attr.lower()}.pt")
     print(f"[SAVED] v_{attr.lower()} → latent_directions/v_{attr.lower()}.pt")
+    
+    
