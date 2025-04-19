@@ -6,9 +6,9 @@ import os
 
 # ==== 설정 ====
 latent_dim = 100
-attribute = 'smiling'  # eyeglasses, smiling, male
+attribute = 'wearing_lipstick'  # wearing_lipstick,blond_hair ,eyeglasses, smiling, male
 alpha = 2  # 조작 강도
-img_path = 'images/jpg_resized/IMG_3811.jpg'  # <- 직접 찍은 이미지 경로
+img_path = 'images/jpg_resized/IMG_3811.png'  # <- 직접 찍은 이미지 경로
 
 # ==== 디바이스 설정 ====
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")

@@ -8,7 +8,7 @@ import os
 
 # ==== 설정 ====
 latent_dim = 100
-attribute = 'smiling'  # eyeglasses, smiling, male
+attribute = 'wearing_lipstick' # blond_hair'  # eyeglasses, smiling, male
 alpha = 2.0  # 조작 강도
 
 # ==== 디바이스 설정 ====
@@ -112,9 +112,9 @@ with torch.no_grad():
 # edited: Generator(Encoder(img) + alpha * v_attr)
 # original: raw input image (denormalized)
 
-combined = torch.cat([recon, edited], dim=0)
+combined = torch.cat([img_batch, recon, edited], dim=0)
 os.makedirs("output/edited", exist_ok=True)
 vutils.save_image(combined, f"output/edited/recon_plus_{attribute}.jpg", nrow=img_batch.size(0), normalize=True)
-vutils.save_image(img_batch.cpu(), f"output/edited/origin{attribute}.jpg", nrow=img_batch.size(0), normalize=True)
+# vutils.save_image(img_batch.cpu(), f"output/edited/origin{attribute}.jpg", nrow=img_batch.size(0), normalize=True)
 
 print(f"[SAVED] 조작된 이미지 저장 완료: output/edited/recon_plus_{attribute}.jpg")
