@@ -10,7 +10,9 @@
 
 # 모델 체크포인트
 checkpoints/netD/*0.pth
+checkpoints/netD128/*.pth
 checkpoints/netG/*0.pth
+checkpoints/netG128/*.pth
 checkpoints/encoder/*0.pth
 
 # 로그 파일
@@ -19,7 +21,11 @@ log_encoder.txt
 
 # 실험 로그, 결과
 output/visualization/*0.jpg
-output/*.pth
+output/recon_encoder/compare/*0.png
+output/recon_encoder/recon/*0.png
+
+output/reconGAN64/*0.jpg
+
 output/*.png
 
 # 캐시 파일
@@ -27,3 +33,9 @@ __pycache__/
 
 # 불필요한 스크립트
 move_ffhq_images.py
+celeb.py
+animation.py
+dcgan_train128.py
+dcgan_train1280.py
+latent_space.py
+recon_want.py

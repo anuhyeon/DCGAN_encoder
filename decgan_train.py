@@ -12,7 +12,8 @@ class Generator(nn.Module):
     def __init__(self):
         super(Generator, self).__init__()
         self.main = nn.Sequential(
-            # Input is Z, going into a convolution (batch, 100, 1, 1)
+            # Input is Z, going into a convolution (batch, 100, 1, 1) 
+            # output_size = (input_size - 1) * stride - 2 * padding + kernel_size + output_padding
             nn.ConvTranspose2d(100, 512, 4, 1, 0, bias=False),
             nn.BatchNorm2d(512),
             nn.ReLU(True),
@@ -86,7 +87,7 @@ def show_generated_images(images, num_images=64):
     # plt.show()
     name = './output/visualization/generated_images.jpg'
     plt.imsave(name, images)
-    plt.close
+    plt.close()
     
 
 def save_generated_images(images, num_images, epoch, idx):
