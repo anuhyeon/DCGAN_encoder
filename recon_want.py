@@ -8,7 +8,7 @@ import os
 
 # ==== 설정 ====
 latent_dim = 100
-attribute = 'wearing_lipstick' # blond_hair'  # eyeglasses, smiling, male
+attribute =  'eyeglasses'  #'wearing_lipstick' # blond_hair'  # eyeglasses, smiling, male
 alpha = 2.0  # 조작 강도
 
 # ==== 디바이스 설정 ====
