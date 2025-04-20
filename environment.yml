@@ -47,4 +47,3 @@ dependencies:
       - tzdata==2025.2
       - urllib3==2.4.0
       - zipp==3.21.0
-prefix: /home/uhan/.conda/envs/dcgan

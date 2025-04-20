@@ -13,6 +13,13 @@
 conda env create -f environment.yaml
 conda activate dcgan
 ```
+아래와 같은 에러가 발생하면 
+```swift
+CondaValueError: prefix already exists or is not writable
+```
+environment.yaml 파일을 텍스트 편집기로 열고 
+```prefix: /home/ ~ /``` 
+이 부분을 삭제해주세요.
 
 ---
 
