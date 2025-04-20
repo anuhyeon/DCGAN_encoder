@@ -1,0 +1,50 @@
+name: dcgan
+channels:
+  - defaults
+  - https://repo.anaconda.com/pkgs/main
+  - https://repo.anaconda.com/pkgs/r
+dependencies:
+  - _libgcc_mutex=0.1=main
+  - _openmp_mutex=5.1=1_gnu
+  - ca-certificates=2025.2.25=h06a4308_0
+  - ld_impl_linux-64=2.40=h12ee557_0
+  - libffi=3.4.4=h6a678d5_1
+  - libgcc-ng=11.2.0=h1234567_1
+  - libgomp=11.2.0=h1234567_1
+  - libstdcxx-ng=11.2.0=h1234567_1
+  - ncurses=6.4=h6a678d5_0
+  - openssl=3.0.16=h5eee18b_0
+  - pip=25.0=py39h06a4308_0
+  - python=3.9.21=he870216_1
+  - readline=8.2=h5eee18b_0
+  - setuptools=75.8.0=py39h06a4308_0
+  - sqlite=3.45.3=h5eee18b_0
+  - tk=8.6.14=h39e8969_0
+  - wheel=0.45.1=py39h06a4308_0
+  - xz=5.6.4=h5eee18b_1
+  - zlib=1.2.13=h5eee18b_1
+  - pip:
+      - certifi==2025.1.31
+      - charset-normalizer==3.4.1
+      - contourpy==1.3.0
+      - cycler==0.12.1
+      - fonttools==4.57.0
+      - idna==3.10
+      - importlib-resources==6.5.2
+      - kiwisolver==1.4.7
+      - matplotlib==3.9.4
+      - numpy==1.24.4
+      - packaging==24.2
+      - pandas==2.2.3
+      - pillow==11.2.1
+      - pillow-heif==0.22.0
+      - pyparsing==3.2.3
+      - python-dateutil==2.9.0.post0
+      - pytz==2025.2
+      - requests==2.32.3
+      - six==1.17.0
+      - tqdm==4.67.1
+      - tzdata==2025.2
+      - urllib3==2.4.0
+      - zipp==3.21.0
+prefix: /home/uhan/.conda/envs/dcgan
