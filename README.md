@@ -7,7 +7,7 @@
 ## 🔧 Environment Setup
 
 ### 1. Conda 가상환경 설정
-아래 명령어를 통해 `environment.yaml` 파일로부터 가상환경을 복원할 수 있습니다:
+아래 명령어를 통해 `environment.yaml` 파일로부터 가상환경을 복원할 수 있습니다
 
 ```bash
 conda env create -f environment.yaml
@@ -45,7 +45,7 @@ environment.yaml 파일을 텍스트 편집기로 열고
 
 ### 1. DCGAN 학습
 - 학습 스크립트: `dcgan_train.py`
-- 실행 시 생성자(Generator)와 판별자(Discriminator)가 학습되며 다음 디렉토리들이 생성됩니다:
+- 실행 시 생성자(Generator)와 판별자(Discriminator)가 학습되며 다음 디렉토리들이 생성됩니다
 
 ```
 checkpoints/netG/     # Generator 가중치 저장 경로
@@ -62,7 +62,7 @@ python dcgan_train.py
 ### 2. Encoder 학습
 - 학습 스크립트: `encoder_train.py`
 - 고정된 Generator를 이용해 Encoder가 학습됩니다 (MSE loss 기반)
-- 다음 디렉토리들이 생성됩니다:
+- 다음 디렉토리들이 생성됩니다
 
 ```
 checkpoints/encoder/         # Encoder 가중치 저장 경로
@@ -84,7 +84,7 @@ python encoder_train.py
 - 스크립트: `extraction_direction.py`
 - 사전 학습된 Encoder를 사용하여 CelebA의 각 속성에 대해 latent space 내의 방향 벡터를 추출합니다.
 - 각 속성은 양의 샘플(예: 안경 있음)과 음의 샘플(안경 없음)의 평균 벡터 차이로 계산됩니다.
-- 결과는 `.pt` 파일로 저장됩니다:
+- 결과는 `.pt` 파일로 저장됩니다
 
 ```
 latent_directions/
@@ -106,7 +106,7 @@ python extraction_direction.py
 
 #### (1) 이미지 준비 및 변환
 
-iPhone으로 찍은 사진을 아래 위치에 저장:
+iPhone으로 찍은 사진을 아래 위치에 저장
 ```
 DCGAN_encoder/heic_images/your_image.HEIC
 ```
@@ -125,7 +125,7 @@ python demo.py
   - `attr_name`: 사용할 속성 방향 벡터 이름 (예: `"smile"`, `"eyeglasses"`)
   - `alpha`: 적용 강도
 
-- 실행 결과는 아래 디렉토리에 저장됩니다:
+- 실행 결과는 아래 디렉토리에 저장됩니다
 ```
 output/demo/
     input.jpg
@@ -140,7 +140,7 @@ python recon_want.py
 ```
 
 - 기본 이미지 하나를 z로 인코딩한 후 속성을 조작하고 재생성 결과를 보여줍니다.
-- 속성 이름은 스크립트 내에서 직접 수정:
+- 속성 이름은 스크립트 내에서 직접 수정
 ```python
 attr_name = "smile"  # "eyeglasses", "male" 등으로 변경 가능
 ```
