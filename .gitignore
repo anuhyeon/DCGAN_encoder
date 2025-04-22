@@ -41,3 +41,6 @@ dcgan_train128.py
 dcgan_train1280.py
 latent_space.py
 # recon_want.py
+
+grad.py
+backward_test.py
