@@ -145,7 +145,7 @@ python recon_want.py
 attr_name = "smile"  # "eyeglasses", "male" 등으로 변경 가능
 ```
 
-- 결과는 아래에 저장:
+- 결과는 아래에 저장
 ```
 output/edited/
     original.png
